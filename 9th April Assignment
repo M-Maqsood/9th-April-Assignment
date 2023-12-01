@@ -1,0 +1,39 @@
+
+Q1. What is Bayes' theorem?
+Ans: Bayes' theorem is a mathematical formula used in probability and statistics. It describes the probability of an event, based on prior knowledge of conditions that might be related to the event.
+Formula: P(A/B)=(P(B/A)*P(A))/P(B)
+
+Q2. What is the formula for Bayes' theorem?
+Ans: Formula: P(A/B)=(P(B/A)*P(A))/P(B)
+
+Q3. How is Bayes' theorem used in practice?
+
+Medical Diagnosis: Bayes theorem is used in medical diagnosis, where the probability of a particular disease or condition given certain symptoms or test results is calculated.
+Machine learning: Bayes theorem finds wide application in applied machine learning and establishes a relationship between data and model.
+Q4. What is the relationship between Bayes' theorem and conditional probability?
+Ans: Conditional probability is the probability of one event occuring given that another event has already occured.
+Bayes' theorem is the way of using conditional probability to update our beliefs about the probability of an event occuring, given new information
+
+Q5. How do you choose which type of Naive Bayes classifier to use for any given problem?
+
+Multinomial naive bayes: When the features are discrete count, such as number of words, Multinomial naive bayes is used.
+Bernoulli naive bayes: When the feature values are binary, Bernoulli naive bayes is used.
+Gaussian naive bayes: When the feature values are continuous and normally distributed then Gaussioan naive bayes is used.
+Q6. Assignment:
+You have a dataset with two features, X1 and X2, and two possible classes, A and B. You want to use Naive Bayes to classify a new instance with features X1 = 3 and X2 = 4. The following table shows the frequency of each feature value for each class:
+
+Screenshot 2023-09-03 213905.png
+Assuming equal prior probabilities for each class, which class would Naive Bayes predict the new instance to belong to?
+
+Since the prior probabilities of each class are equal, we assume them as 0.5 respectively.
+P(X1=3/A)=4/(4+3+3)=4/10=0.4
+P(X2=4/A)=3/(3+3+3+4)=3/13=0.23
+P(X1=3/B)=1/(1+2+2)=1/5=0.2
+P(X2=4/B)=3/(3+2+2+2)=3/9=0.33
+
+
+P(A/X1=3,X2=4)=P(X1=3/A) * P(X2=4/A) * P(A) = 0.4 * 0.23 * 0.5 = 0.046
+P(B/X1=3,X2=4)=P(X1=3/B) * P(X2=4/B) * P(B) = 0.2 * 0.33 * 0.5 = 0.033
+
+
+Since P(A/X1=3,X2=4) > P(B/X1=3,X2=4), we assume that new instance would belong to class A.
